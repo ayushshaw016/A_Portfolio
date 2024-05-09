@@ -12,6 +12,16 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "oHIZ7ZWTP1PaDwYPb",
+      });
+   })();
+</script>
    </head>
    <body>
       <!-- Scroll Button start -->
@@ -243,6 +253,7 @@
                         <div class="info">
                            <div class="head">Email</div>
                            <div class="sub-title">ayushshaw016@gmail.com</div>
+                           <div class="sub-title">ayushs.ug21.cs@nitp.ac.in</div>
                         </div>
                      </div>
                   </div>
@@ -281,26 +292,26 @@
                </div>
                <div class="column right">
                   <div class="text">Message me</div>
-                  <form action="#">
+                  <!-- <form> -->
                      <div class="fields">
                         <div class="field name">
-                           <input type="text" placeholder="Name" required>
+                           <input type="text" placeholder="Name" required id="fullname">
                         </div>
                         <div class="field email">
-                           <input type="email" placeholder="Email" name="email" required>
+                           <input type="email" id="email_id" placeholder="Email" name="email" required>
                         </div>
                      </div>
                      <div class="field">
-                        <input type="text" placeholder="Subject" required>
+                        <input type="text" id="subject"  placeholder="Subject" required>
                      </div>
                      <div class="field textarea">
-                        <textarea cols="30" rows="10" placeholder="Describe Project..." required></textarea>
+                        <textarea cols="30" rows="10" id="message" placeholder="Describe Project..." required></textarea>
                      </div>
                      <div class="button">
-                        <button type="submit">Send Message <i class="fas fa-paper-plane"></i>
+                        <button type="submit" onclick="SendMail()">Send Message <i class="fas fa-paper-plane"></i>
                         </button>
                      </div>
-                  </form>
+                  <!-- </form> -->
                </div>
             </div>
          </div>

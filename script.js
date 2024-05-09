@@ -93,3 +93,25 @@ $(document).ready(function () {
   });
   // owl carousel script end
 });
+
+// Send Mail Function
+function SendMail() {
+  var params = {
+    from_name: document.getElementById("fullname").value,
+    email_id: document.getElementById("email_id").value,
+    message: document.getElementById("message").value,
+    subject: document.getElementById("subject").value,
+  };
+  // console.log(params);
+  emailjs
+    // service_id, template_id
+    .send("service_xix0rfe", "template_sv2ewit", params)
+    .then(function (res) {
+      alert("Success" + res.status);
+    });
+
+  (document.getElementById("fullname").value = ""),
+    (document.getElementById("email_id").value = ""),
+    (document.getElementById("message").value = ""),
+    (document.getElementById("subject").value = "");
+}
