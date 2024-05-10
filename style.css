@@ -621,6 +621,9 @@ footer span a:hover {
 }
 
 @media (max-width: 947px) {
+  .changewidth{
+    width: 70%;
+  }
   .max-width {
     padding: 0 50px;
   }
@@ -707,6 +710,7 @@ footer span a:hover {
   .about .about-content .right .text .break {
     display: block;
   }
+ 
 }
 
 @media (max-width: 500px) {
